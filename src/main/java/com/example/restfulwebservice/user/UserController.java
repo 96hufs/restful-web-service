@@ -4,6 +4,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.annotation.Resource;
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
@@ -30,6 +31,7 @@ public class UserController {
         if(user==null ) {
             throw new UserNotFoundException(String.format("ID[%s] not found", id));
         }
+
         return user;
     }
 

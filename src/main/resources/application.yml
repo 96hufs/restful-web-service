@@ -4,7 +4,11 @@ server:
 logging:
   level:
     org.springframework: DEBUG
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 spring:
   messages:
     basename: messages
